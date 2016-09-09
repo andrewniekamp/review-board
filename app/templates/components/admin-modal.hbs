@@ -1,7 +1,19 @@
 {{yield}}
 
-
 <!-- INSIDE MODAL -->
-{{add-category model=model}}
-
-{{add-product model=model}}
+<div class="admin-section">
+  {{#if showAdmin}}
+    <button class="btn admin-btn" {{action 'adminFormHide'}}>Admin {{fa-icon "angle-up"}}</button>
+    <h2>Admin Only</h2>
+    <div class="row">
+      <div class="col-xs-6">
+        {{add-category saveCat2="saveCat3"}}
+      </div>
+      <div class="col-xs-6">
+        {{add-product model=model}}
+      </div>
+    </div>
+  {{else}}
+    <button class="btn admin-btn" {{action 'adminFormShow'}}>Admin {{fa-icon "angle-down"}}</button>
+  {{/if}}
+</div>

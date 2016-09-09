@@ -18,7 +18,7 @@ module.exports = function(environment) {
       authDomain: "review-board-b9361.firebaseapp.com",
       databaseURL: "https://review-board-b9361.firebaseio.com",
       storageBucket: "review-board-b9361.appspot.com",
-    }
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance

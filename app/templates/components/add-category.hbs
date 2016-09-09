@@ -1,1 +1,16 @@
 {{yield}}
+{{#if addNewCategory}}
+  <h1>Add Category</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        {{input class="form-control" value=name placeholder="Category Name"}}
+      </div>
+
+      <button class="btn" {{action 'saveCat1'}}>Save</button>
+      <button class="btn" {{action 'categoryFormHide'}}>Cancel</button>
+    </form>
+  </div>
+{{else}}
+  <button class="btn" {{action 'categoryFormShow'}}>Add Category</button>
+{{/if}}

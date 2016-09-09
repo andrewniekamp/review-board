@@ -1,9 +1,24 @@
 {{yield}}
 
 <div class="col-xs-12">
-  {{#each product.reviews as |review|}}
-  <div class="col-sm-6">
-    {{review-tile review=review}}
-  </div>
-  {{/each}}
+  {{#if modalShowing}}
+    {{#modal-dialog close="toggleModal"
+    targetAttachment="center"
+    translucentOverlay=true}}
+      <div class="review-modal">
+        
+        {{add-review product=product saveRev2="saveRev3"}}
+
+        <h4>Reviews of {{product.title}}</h4>
+        {{#each product.reviews as |review|}}
+          <div class="col-xs-12">
+            {{review-tile review=review}}
+          </div>
+          <button class="btn" {{action 'toggleModal'}}>Close</button>
+        {{/each}}
+      </div>
+    {{/modal-dialog}}
+  {{else}}
+    <button class="btn" {{action 'toggleModal'}}>Reviews</button>
+  {{/if}}
 </div>

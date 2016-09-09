@@ -18,11 +18,20 @@ export default Ember.Route.extend({
       var newProduct = this.store.createRecord('product', params);
       var category = params.category;
       category.get('products').addObject(newProduct);
-      console.log(params);
       newProduct.save().then(function() {
         return category.save();
       });
       this.transitionTo('index');
+    },
+    saveRev9(params) {
+      var newReview = this.store.createRecord('review', params);
+      var product = params.product;
+      product.get('reviews').addObject(newReview);
+      newReview.save().then(function() {
+        return product.save();
+      });
+      // is this necessary?
+      // this.transitionTo('index');
     },
   }
 });

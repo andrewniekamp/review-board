@@ -1,1 +1,23 @@
 {{yield}}
+{{#if addNewReview}}
+  <h1>Add Review for {{product.title}}</h1>
+  <div>
+    <form>
+        {{input class="form-control" value=product class="hidden"}}
+      <div class="form-group">
+        {{input class="form-control" value=reviewer placeholder="reviewer"}}
+      </div>
+      <div class="form-group">
+        {{input class="form-control" value=subject placeholder="subject"}}
+      </div>
+      <div class="form-group">
+        {{input class="form-control" value=body placeholder="body"}}
+      </div>
+
+      <button class="btn" {{action 'saveRev1'}}>Save</button>
+      <button class="btn" {{action 'reviewFormHide'}}>Cancel</button>
+    </form>
+  </div>
+{{else}}
+  <button class="btn" {{action 'reviewFormShow'}}>Create Review</button>
+{{/if}}

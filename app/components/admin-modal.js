@@ -1,9 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  showAdmin: false,
+  // showAdmin: false,
+  modalShowing: false,
 
   actions: {
+    toggleModal: function() {
+      this.toggleProperty('modalShowing');
+    },
     adminFormShow() {
       this.set('showAdmin', true);
     },

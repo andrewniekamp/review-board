@@ -5,5 +5,5 @@ export default DS.Model.extend({
   subject: DS.attr(),
   body: DS.attr(),
   time: DS.attr(),
-  game: DS.belongsTo('game', {async: true})
+  product: DS.belongsTo('product', {async: true})
 });

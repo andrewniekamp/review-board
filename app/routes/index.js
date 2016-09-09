@@ -14,14 +14,15 @@ export default Ember.Route.extend({
       newCategory.save();
       this.transitionTo('index');
     },
-    // saveProd5(params) {
-    //   var newProduct = this.store.createRecord('product', params);
-    //   var category = params.category;
-    //   category.get('products').addObject(newProduct);
-    //   newProduct.save().then(function() {
-    //     return category.save();
-    //   });
-    //   this.transitionTo('index');
-    // },
+    saveProd5(params) {
+      var newProduct = this.store.createRecord('product', params);
+      var category = params.category;
+      category.get('products').addObject(newProduct);
+      console.log(params);
+      newProduct.save().then(function() {
+        return category.save();
+      });
+      this.transitionTo('index');
+    },
   }
 });

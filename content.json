@@ -1,0 +1,39 @@
+{
+  "categories": [{
+    "name": "Randall",
+    "products": "Where am I?"
+  }, {
+    "name": "Randall",
+    "products": "Where am I?"
+  }],
+  "products": [{
+    "image": "Victoria",
+    "title": "I will sell mine for 5 smackers each day.",
+    "summary": "1",
+    "date": "Victoria",
+    "platform": "I will sell mine for 5 smackers each day.",
+    "category": "1",
+    "reviews": "1"
+  }, {
+    "image": "Victoria",
+    "title": "I will sell mine for 5 smackers each day.",
+    "summary": "1",
+    "date": "Victoria",
+    "platform": "I will sell mine for 5 smackers each day.",
+    "category": "1",
+    "reviews": "1"
+  }],
+  "reviews": [{
+    "reviewer": "Victoria",
+    "subject": "I will sell mine for 5 smackers each day.",
+    "body": "Victoria",
+    "time": "I will sell mine for 5 smackers each day.",
+    "product": "1"
+  }, {
+    "reviewer": "Victoria",
+    "subject": "I will sell mine for 5 smackers each day.",
+    "body": "Victoria",
+    "time": "I will sell mine for 5 smackers each day.",
+    "product": "1"
+  }]
+}

@@ -13,6 +13,7 @@ export default Ember.Component.extend({
       this.set('title', '');
       this.set('summary', '');
       this.set('platform', '');
+      this.set('date', '');
       this.set('category', '');
     },
     saveProd1() {
@@ -20,6 +21,7 @@ export default Ember.Component.extend({
         image: this.get('image'),
         title: this.get('title'),
         summary: this.get('summary'),
+        date: Date.now(),
         platform: this.get('platform'),
         //category here needs a hidden input on handlebar to store value from setCategory below
         category: this.get('category')

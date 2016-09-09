@@ -1,3 +1,11 @@
 {{outlet}}
 
+{{#each model.categories as |category|}}
+  <div class="row">
+    <div class="col-xs-12 category-box">
+      {{category-tile category=category}}
+    </div>
+  </div>
+  {{/each}}
+
 {{admin-modal model=model saveCat4="saveCat5" saveProd4="saveProd5"}}

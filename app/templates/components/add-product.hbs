@@ -1,1 +1,36 @@
 {{yield}}
+{{#if addNewProduct}}
+  <h1>Add Product</h1>
+  <div>
+    <form>
+      <!-- onchange={{action "selectVehicle" value="target.value"}} -->
+      <div class="form-group">
+        <select class="form-control dropdown" onchange={{action "setCategory" value="target.value"}}>
+            <option disabled selected>Choose a Category</option>
+          {{#each model.categories as |categoryChoice|}}
+            <option value={{categoryChoice.name}} >{{categoryChoice.name}}</option>
+            <!-- selected={{eq model.category.name categoryChoice.name}} -->
+          {{/each}}
+        </select>
+      </div>
+        {{input class="form-control" value=category class="hidden"}}
+      <div class="form-group">
+        {{input class="form-control" value=image placeholder="image"}}
+      </div>
+      <div class="form-group">
+        {{input class="form-control" value=title placeholder="title"}}
+      </div>
+      <div class="form-group">
+        {{input class="form-control" value=summary placeholder="summary"}}
+      </div>
+      <div class="form-group">
+        {{input class="form-control" value=platform placeholder="platform"}}
+      </div>
+
+      <button class="btn" {{action 'saveProd1'}}>Save</button>
+      <button class="btn" {{action 'productFormHide'}}>Cancel</button>
+    </form>
+  </div>
+{{else}}
+  <button class="btn" {{action 'productFormShow'}}>Create Product</button>
+{{/if}}

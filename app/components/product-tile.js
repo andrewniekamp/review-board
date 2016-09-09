@@ -7,7 +7,7 @@ export default Ember.Component.extend({
     saveRev5(params) {
       this.sendAction('saveRev6', params);
     },
-    addToFave(product) {
+    addToFaves(product) {
       this.get('favorites').add(product);
     }
   }

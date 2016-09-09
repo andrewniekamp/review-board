@@ -1,0 +1,23 @@
+{{yield}}
+{{#if favorites.products}}
+  <h1>Current Items in Faves</h1>
+  <button class="btn btn-danger" {{action 'emptyFaves'}}>Empty Faves</button>
+  {{#each favorites.products as |product|}}
+  <div class="cart-product">
+    <div class="row">
+      <div class="col-xs-12">
+        <img class="fave-img" src={{product.image}} alt={product.title} />
+        <h4>{{product.title}}</h4>
+        <h4>{{product.summary}}</h4>
+        <h4>{{product.category.name}}</h4>
+        <h4>maybe ave here later</h4>
+      </div>
+      <div class="col-xs-12">
+        <button class="btn btn-danger" {{action 'removeFromFaves' product}}>Remove</button>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+{{else}}
+  <h1>Your Favorites are Empty</h1>
+{{/if}}

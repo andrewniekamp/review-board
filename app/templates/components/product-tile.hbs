@@ -1,0 +1,25 @@
+{{yield}}
+{{product.title}}
+
+<div class="product-box">
+  <div class="col-sm-6">
+    <img class="product-image" src={{product.image}} alt={{product.summary}} />
+  </div>
+  <div class="col-sm-6">
+    <div class="row">
+      <h4>{{product.title}}</h4>
+      <p>
+        {{product.summary}}
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <h5>{{product.platform}}</h5>
+      </div>
+      <div class="col-xs-6">
+        <button class="btn add-to-cart-btn" {{action "addToCart" product}}>Add to Cart</button>
+        {{review-modal}}
+      </div>
+    </div>
+  </div>
+</div>

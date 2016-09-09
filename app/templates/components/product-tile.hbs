@@ -3,7 +3,7 @@
 
 <div class="product-box">
   <div class="col-sm-6">
-    <img class="product-image" src={{product.image}} alt={{product.summary}} />
+    <img class="product-image" src={{product.image}} alt={{product.title}} />
   </div>
   <div class="col-sm-6">
     <div class="row">
@@ -14,11 +14,11 @@
     </div>
     <div class="row">
       <div class="col-xs-6">
+        <button class="btn fave-btn" {{action "addToFave" product}}>{{fa-icon "star"}}</button>
         <h5>{{product.platform}}</h5>
       </div>
       <div class="col-xs-6">
-        <button class="btn fave-btn" {{action "addToFave" product}}>{{fa-icon "star"}}</button>
-        REVIEW AREA {{review-modal product=product saveRev4="saveRev5"}}
+        {{review-modal product=product saveRev4="saveRev5"}}
       </div>
     </div>
   </div>

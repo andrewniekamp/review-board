@@ -17,6 +17,9 @@ export default Ember.Route.extend({
     saveProd5(params) {
       var newProduct = this.store.createRecord('product', params);
       var category = params.category;
+      console.log(params);
+      console.log(newProduct);
+      console.log(category);
       category.get('products').addObject(newProduct);
       newProduct.save().then(function() {
         return category.save();
@@ -31,6 +34,7 @@ export default Ember.Route.extend({
         return product.save();
       });
       // is this necessary?
+      // location.reload();
       // this.transitionTo('index');
     },
   }

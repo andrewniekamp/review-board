@@ -1,19 +1,19 @@
 {{yield}}
-{{#if favorites.products}}
+{{#if favorites.items}}
   <h1>Current Items in Faves</h1>
   <button class="btn btn-danger" {{action 'emptyFaves'}}>Empty Faves</button>
-  {{#each favorites.products as |product|}}
-  <div class="cart-product">
+  {{#each favorites.items as |items|}}
+  <div class="cart-items">
     <div class="row">
       <div class="col-xs-12">
-        <img class="fave-img" src={{product.image}} alt={product.title} />
-        <h4>{{product.title}}</h4>
-        <h4>{{product.summary}}</h4>
-        <h4>{{product.category.name}}</h4>
+        <img class="fave-img" src={{items.image}} alt={items.title} />
+        <h4>{{items.title}}</h4>
+        <h4>{{items.summary}}</h4>
+        <h4>{{items.category.name}}</h4>
         <h4>maybe ave here later</h4>
       </div>
       <div class="col-xs-12">
-        <button class="btn btn-danger" {{action 'removeFromFaves' product}}>Remove</button>
+        <button class="btn btn-danger" {{action 'removeFromFaves' items}}>Remove</button>
       </div>
     </div>
   </div>

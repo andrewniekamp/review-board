@@ -1,22 +1,22 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  products: [],
+  items: [],
 
   add(product) {
-    if (this.get('products').includes(product)) {
-      console.log("ALREADY ADDED BRAH");
+    if (this.get('items').includes(product)) {
+      console.log("Already in Cart");
     } else {
-      this.get('products').pushObject(product);
+      this.get('items').pushObject(product);
     }
   },
   remove(product) {
-    var index = this.get('products').indexOf(product);
+    var index = this.get('items').indexOf(product);
     if (index >= 0) {
-      this.get('products').removeAt(index);
+      this.get('items').removeAt(index);
     }
   },
   empty() {
-    this.set('products', []);
+    this.set('items', []);
   }
 });

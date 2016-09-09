@@ -17,7 +17,7 @@
         <h5>{{product.platform}}</h5>
       </div>
       <div class="col-xs-6">
-        <button class="btn add-to-cart-btn" {{action "addToCart" product}}>Add to Cart</button>
+        <button class="btn fave-btn" {{action "addToFave" product}}>{{fa-icon "star"}}</button>
         REVIEW AREA {{review-modal product=product saveRev4="saveRev5"}}
       </div>
     </div>

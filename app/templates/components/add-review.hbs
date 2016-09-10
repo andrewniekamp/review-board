@@ -13,10 +13,12 @@
       <div class="form-group">
         {{input class="form-control" value=body placeholder="body"}}
       </div>
-
+      <h1>ok</h1>
+      {{star-rating item=product rating=newScore on-click="updateRating"}}
+      <h1>ok</h1>
       <button class="btn" {{action 'saveRev1'}}>Save</button>
-      <button class="btn" {{action 'reviewFormHide'}}>Cancel</button>
     </form>
+    <button class="btn" {{action 'reviewFormHide'}}>Cancel</button>
   </div>
 {{else}}
   <button class="btn" {{action 'reviewFormShow'}}>Create Review</button>

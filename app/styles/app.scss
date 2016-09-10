@@ -1,6 +1,10 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
 
+.background-image {
+  background: url('/assets/images/sunrise.jpg') no-repeat center center fixed;
+}
+
 .admin-modal, .review-modal {
   padding: 30px;
 }
@@ -10,7 +14,7 @@
 }
 
 .category-tile {
-  background-color: steelblue;
+  background-color: white;
   margin-bottom: 50px;
 }
 

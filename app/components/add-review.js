@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewReview: false,
+  newScore: 0,
 
   actions: {
     reviewFormShow() {
@@ -12,8 +13,6 @@ export default Ember.Component.extend({
       this.set('reviewer', '');
       this.set('subject', '');
       this.set('body', '');
-      this.set('time', '');
-      this.set('product', '');
     },
     saveRev1() {
       var params = {
@@ -22,10 +21,15 @@ export default Ember.Component.extend({
         body: this.get('body'),
         time: Date.now(),
         product: this.get('product'),
+        score: this.get('newScore')
       };
       //send to the action to empty/hide form on completion
       this.send('reviewFormHide');
       this.sendAction('saveRev2', params);
+      this.set('newScore', 0);
+    },
+    updateRating(params) {
+      this.set('newScore', params.rating);
     }
   }
 });

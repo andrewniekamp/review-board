@@ -21,7 +21,7 @@ export default Ember.Component.extend({
         body: this.get('body'),
         time: Date.now(),
         product: this.get('product'),
-        score: this.get('newScore')
+        score: parseInt(this.get('newScore'))
       };
       //send to the action to empty/hide form on completion
       this.send('reviewFormHide');

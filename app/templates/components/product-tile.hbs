@@ -1,18 +1,17 @@
 {{yield}}
-{{product.title}}
 
-<div class="product-box">
+<div class="product-box row">
   <div class="col-sm-6">
     <img class="product-image" src={{product.image}} alt={{product.title}} />
   </div>
   <div class="col-sm-6">
-    <div class="row">
+    <div class="row product-about">
       <h4>{{product.title}}</h4>
       <p>
         {{product.summary}}
       </p>
     </div>
-    <div class="row">
+    <div class="row product-about">
       <div class="col-xs-6">
         <button class="btn fave-btn" {{action "addToFaves" product}}>{{fa-icon "star"}}</button>
         <h5>{{product.platform}}</h5>

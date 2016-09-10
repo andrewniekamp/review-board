@@ -9,9 +9,22 @@
   padding: 30px;
 }
 
-.product-image {
-  width: 100%;
+.products {
+  padding: 20px;
+  .product-box {
+    height: auto;
+    padding-bottom: 30px;
+    .product-image {
+      width: 100%;
+      object-fit: cover;
+    }
+    .product-about {
+      padding: 30px;
+    }
+  }
 }
+
+
 
 .category-tile {
   background-color: white;
@@ -23,6 +36,8 @@
   width: 40px;
   height: 40px;
   outline: none !important;
+  background-color: white;
+  border: 1px solid black;
   i {
     font-size: 25px;
     margin-left: -4px;
@@ -32,7 +47,8 @@
 
 .fave-btn:hover {
   color: black;
-  background-color: crimson;
+  background-color: gold;
+  border: 1px solid lightyellow;
 }
 
 .fave-img {

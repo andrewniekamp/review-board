@@ -1,11 +1,9 @@
 {{yield}}
 <div class="container category-tile">
-  <h3>{{category.name}}</h3>
-  <div class="col-xs-12">
+  <div class="col-xs-12 products">
+    <h3>{{category.name}}</h3>
     {{#each category.products as |product|}}
-    <div class="col-xs-12">
       {{product-tile product=product saveRev6="saveRev7"}}
-    </div>
     {{/each}}
   </div>
 </div>

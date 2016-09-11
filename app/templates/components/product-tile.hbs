@@ -14,14 +14,14 @@
     <div class="row product-about">
       <div class="col-xs-6">
         <button class="btn fave-btn" {{action "addToFaves" product}}>{{fa-icon "star"}}</button>
-        <h5>{{product.platform}}</h5>
       </div>
       <div class="col-xs-6">
         <div class="row">
           {{review-modal product=product saveRev4="saveRev5"}}
         </div>
         <div class="row">
-          {{product-status product}}
+          <!-- Set dependency of helper on product.aveOfScores -->
+          {{product-status product product.aveOfScores}}
         </div>
       </div>
     </div>

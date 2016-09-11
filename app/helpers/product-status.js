@@ -5,6 +5,9 @@ export function productStatus(params/*, hash*/) {
 
   if(product.get('reviews').get('length') === 0) {
     return Ember.String.htmlSafe('<p><span class="glyphicon glyphicon-exclamation-sign"></span> No reviews</p>');
+  } else {
+    var score = product.get('aveOfScores');
+    return Ember.String.htmlSafe('<p>Average review: ' + score + '</p>');
   }
 }
 

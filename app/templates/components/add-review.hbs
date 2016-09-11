@@ -1,6 +1,6 @@
 {{yield}}
 {{#if addNewReview}}
-  <h1>Add Review for {{product.title}}</h1>
+  <h2>Add Review for {{product.title}}</h2>
   <div>
     <form>
         {{input class="form-control" value=product class="hidden"}}
@@ -13,13 +13,12 @@
       <div class="form-group">
         {{input class="form-control" value=body placeholder="body"}}
       </div>
-      <h1>ok</h1>
+      <h4>Rating</h4>
       {{star-rating item=product rating=newScore on-click="updateRating"}}
-      <h1>ok</h1>
-      <button class="btn" {{action 'saveRev1'}}>Save</button>
+      <button class="btn review-btn" {{action 'saveRev1'}}>Save</button>
     </form>
-    <button class="btn" {{action 'reviewFormHide'}}>Cancel</button>
+    <button class="btn review-btn" {{action 'reviewFormHide'}}>Cancel</button>
   </div>
 {{else}}
-  <button class="btn" {{action 'reviewFormShow'}}>Create Review</button>
+  <button class="btn review-btn" {{action 'reviewFormShow'}}>Create Review</button>
 {{/if}}

@@ -27,10 +27,10 @@
         {{input class="form-control" value=platform placeholder="platform"}}
       </div> -->
 
-      <button class="btn" {{action 'saveProd1'}}>Save</button>
-      <button class="btn" {{action 'productFormHide'}}>Cancel</button>
+      <button class="btn admin-btn" {{action 'saveProd1'}}>Save</button>
+      <button class="btn admin-btn" {{action 'productFormHide'}}>Cancel</button>
     </form>
   </div>
 {{else}}
-  <button class="btn" {{action 'productFormShow'}}>Create Product</button>
+  <button class="btn admin-btn" {{action 'productFormShow'}}>Create Product</button>
 {{/if}}

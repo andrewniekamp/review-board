@@ -7,10 +7,10 @@
         {{input class="form-control" value=name placeholder="Category Name"}}
       </div>
 
-      <button class="btn" {{action 'saveCat1'}}>Save</button>
-      <button class="btn" {{action 'categoryFormHide'}}>Cancel</button>
+      <button class="btn admin-btn" {{action 'saveCat1'}}>Save</button>
+      <button class="btn admin-btn" {{action 'categoryFormHide'}}>Cancel</button>
     </form>
   </div>
 {{else}}
-  <button class="btn" {{action 'categoryFormShow'}}>Add Category</button>
+  <button class="btn admin-btn" {{action 'categoryFormShow'}}>Add Category</button>
 {{/if}}

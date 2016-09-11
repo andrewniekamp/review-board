@@ -1,12 +1,53 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
 
+body {
+  font-family: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+  .btn {
+    border-radius: 0;
+  }
+}
+
+.background-cover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .background-image {
   background: url('/assets/images/sunrise.jpg') no-repeat center center fixed;
 }
 
+.header-section {
+  text-align: center;
+  background-color: darkgrey;
+  color: white;
+  #logo {
+    width: 50px;
+  }
+  .header-btn {
+    width: 40%;
+    margin-bottom: 5px;
+    background-color: #333;
+    font-size: 16px;
+  }
+  .header-btn:hover {
+    color: crimson;
+  }
+  .header-fave-btn {
+    background-color: crimson;
+  }
+  .header-fave-btn:hover {
+    color: #333;
+  }
+}
+
 .admin-modal, .review-modal {
   padding: 30px;
+}
+
+.category-tile {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 50px;
 }
 
 .products {
@@ -21,8 +62,10 @@
     .product-about {
       padding: 0px 30px 15px;
       h4 {
-        margin-top: 0px;
       }
+    }
+    .product-lower {
+      text-align: center;
     }
   }
 }
@@ -37,13 +80,13 @@
   margin-bottom: 10px;
 }
 
-.category-tile {
-  background-color: white;
-  margin-bottom: 50px;
+.favorite-modal {
+  max-width: 600px;
+  text-align: center;
 }
 
 .fave-btn {
-  border-radius: 100%;
+  border-radius: 100% !important;
   width: 40px;
   height: 40px;
   outline: none !important;
@@ -51,7 +94,7 @@
   border: 1px solid black;
   i {
     font-size: 25px;
-    margin-left: -4px;
+    margin-left: -5px;
     margin-top: 1px;
   }
 }

@@ -5,15 +5,15 @@
     <form>
         {{input class="form-control" value=product class="hidden"}}
       <div class="form-group">
-        {{input class="form-control" value=reviewer placeholder="reviewer"}}
+        {{input class="form-control" value=reviewer placeholder="Your Name"}}
       </div>
       <div class="form-group">
-        {{input class="form-control" value=subject placeholder="subject"}}
+        {{input class="form-control" value=subject placeholder="Review Headline"}}
       </div>
       <div class="form-group">
-        {{input class="form-control" value=body placeholder="body"}}
+        {{input class="form-control" value=body placeholder="Review Body"}}
       </div>
-      <h4>Rating</h4>
+      <h4>Click a star (1-5):</h4>
       {{star-rating item=product rating=newScore on-click="updateRating"}}
       <button class="btn review-btn" {{action 'saveRev1'}}>Save</button>
     </form>

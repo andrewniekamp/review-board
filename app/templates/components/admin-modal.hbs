@@ -1,7 +1,7 @@
 {{yield}}
 
 <!-- INSIDE MODAL -->
-<div class="admin-section container">
+<div class="admin-section">
   {{#if modalShowing}}
     {{#modal-dialog close="toggleModal"
                     targetAttachment="center"
@@ -14,10 +14,12 @@
         <div class="row">
           {{add-product model=model saveProd2="saveProd3"}}
         </div>
+        <div class="row">
+          <button class="btn admin-btn btn-danger" {{action 'toggleModal'}}>Close</button>
+        </div>
       </div>
-      <button class="btn admin-btn" {{action 'toggleModal'}}>Close</button>
     {{/modal-dialog}}
   {{else}}
-    <button class="btn" {{action 'toggleModal'}}>Admin</button>
+    <button class="btn header-btn" {{action 'toggleModal'}}>Admin</button>
   {{/if}}
 </div>

@@ -1,26 +1,23 @@
 {{yield}}
-<div class="favorite-section container">
+<div class="favorite-section">
   {{#if modalShowing}}
     {{#modal-dialog close="toggleModal"
                     targetAttachment="center"
                     translucentOverlay=true}}
       <div class="favorite-modal">
-        <h2>Favorites</h2>
+        <h1>Favorites</h1>
         {{#if favorites.items}}
-          <h1>Current Items in Faves</h1>
-          <button class="btn btn-danger" {{action 'emptyFaves'}}>Empty Faves</button>
+          <button class="btn btn-danger" {{action 'emptyFaves'}}>Clear Favorites</button>
           {{#each favorites.items as |items|}}
+          <hr>
           <div class="cart-items">
             <div class="row">
-              <div class="col-xs-12">
-                <img class="fave-img" src={{items.image}} alt={items.title} />
-                <h4>{{items.title}}</h4>
-                <h4>{{items.summary}}</h4>
-                <h4>{{items.category.name}}</h4>
-                <h4>maybe ave here later</h4>
-              </div>
-              <div class="col-xs-12">
+              <div class="col-xs-7">
+                <h4>{{items.title}}, from {{items.category.name}}</h4>
                 <button class="btn btn-danger" {{action 'removeFromFaves' items}}>Remove</button>
+              </div>
+              <div class="col-xs-5">
+                <img class="fave-img" src={{items.image}} alt={items.title} />
               </div>
             </div>
           </div>
@@ -32,6 +29,6 @@
       <button class="btn admin-btn" {{action 'toggleModal'}}>Close</button>
     {{/modal-dialog}}
   {{else}}
-    <button class="btn" {{action 'toggleModal'}}>Favorites</button>
+    <button class="btn header-btn header-fave-btn" {{action 'toggleModal'}}>Favorites</button>
   {{/if}}
 </div>

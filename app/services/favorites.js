@@ -5,7 +5,7 @@ export default Ember.Service.extend({
 
   add(product) {
     if (this.get('items').includes(product)) {
-      console.log("Already in Cart");
+      console.log("Already in Faves");
     } else {
       this.get('items').pushObject(product);
     }

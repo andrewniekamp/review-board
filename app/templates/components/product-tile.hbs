@@ -17,7 +17,12 @@
         <h5>{{product.platform}}</h5>
       </div>
       <div class="col-xs-6">
-        {{review-modal product=product saveRev4="saveRev5"}}
+        <div class="row">
+          {{review-modal product=product saveRev4="saveRev5"}}
+        </div>
+        <div class="row">
+          {{product-status product}}
+        </div>
       </div>
     </div>
   </div>

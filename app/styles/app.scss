@@ -19,12 +19,18 @@
       object-fit: cover;
     }
     .product-about {
-      padding: 30px;
+      padding: 0px 30px 15px;
+      h4 {
+        margin-top: 0px;
+      }
     }
   }
 }
 
-
+.review-tile {
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
 
 .category-tile {
   background-color: white;

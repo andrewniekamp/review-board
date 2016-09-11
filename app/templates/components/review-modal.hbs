@@ -19,10 +19,10 @@
             {{review-tile review=review}}
           </div>
         {{/each}}
-        <button class="btn" {{action 'toggleModal'}}>Close</button>
+        <button class="btn review-btn" {{action 'toggleModal'}}>Close</button>
       </div>
     {{/modal-dialog}}
   {{else}}
-    <button class="btn" {{action 'toggleModal'}}>Reviews</button>
+    <button class="btn review-btn" {{action 'toggleModal'}}>Reviews</button>
   {{/if}}
 </div>

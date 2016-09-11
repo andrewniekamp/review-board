@@ -1,9 +1,11 @@
 {{yield}}
 
-<h4>{{review.subject}}</h4>
-{{star-rating item=review rating=review.score}}
-<p>
-  {{review.body}}
-</p>
-<h5>{{review.reviewer}}</h5>
-<h6>{{review.time}}</h6>
+<div class="review-tile">
+  <h4>{{review.subject}}</h4>
+  <h6>{{review.reviewer}}</h6>
+  <h6>{{review-time review.time}}</h6>
+  {{star-rating item=review rating=review.score}}
+  <p>
+    {{review.body}}
+  </p>
+</div>
